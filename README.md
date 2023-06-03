@@ -51,10 +51,6 @@ Follow the steps below to set up and run the application locally.
 
 To deploy the application to a production environment, you can follow the deployment guides for Azure Cosmos DB, Node.js backend, and Next.js frontend separately.
 
-## Contributions
-
-Contributions to the Explore Space project are welcome! If you'd like to contribute, please follow the guidelines outlined in the `CONTRIBUTING.md` file.
-
 ## License
 
 The Explore Space project is open-source and released under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
