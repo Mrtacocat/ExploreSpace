@@ -1,14 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
-const Home = () => {
+export default function Home() {
   return (
-    <main>
-      <h1>Welcome to My App</h1>
-      <Link href="/login">
-        <a>Login</a>
-      </Link>
-    </main>
-  );
-};
-
-export default Home;
+    <div>
+      Hello World. <Link href="/Login">About</Link>
+    </div>
+  )
+}
