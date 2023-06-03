@@ -1,7 +1,7 @@
 # Explore Space - MERN Stack C# Backend with Azure Cosmos DB RU and Next.js TSX Frontend
 
 ### Coming soon!
-[Explore Space](https://example.com/explore-space.png)
+[Explore Space link](https://example.com/explore-space.png)
 
 Explore Space is a web application that allows users to delve into the wonders of space. It provides a visually rich and informative experience for users to learn about celestial bodies, space missions, and astronomical phenomena. This README provides an overview of the application's features, architecture, and setup instructions.
 
