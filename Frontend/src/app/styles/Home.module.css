@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(../img/forside.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}  
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.herofooter {
+  display: flex;
+}
