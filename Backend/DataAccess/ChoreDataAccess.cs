@@ -5,8 +5,8 @@ namespace Backend.DataAccess;
 
 public class ChoreDataAccess
 {
-    private const string ConnectionString = "mongodb://127.0.0.1:27017";
-    private const string DatabaseName = "choredb";
+    private const string ConnectionString = "mongodb://explorespaceaccount:ScGFZvIa5TbpvFbKQbU8BrWXRVOzs0pE8MkAJs2kx5hDcJv9RrAqiZ5TGEEhJWHjE9IGmbay7ZPXACDbhPiRlQ%3D%3D@explorespaceaccount.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@explorespaceaccount@";
+    private const string DatabaseName = "UsersExploreSpace";
     private const string ChoreCollection = "chore_chart";
     private const string UserCollection = "users";
     private const string ChoreHistoryCollection = "chore_history";

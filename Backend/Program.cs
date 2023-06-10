@@ -26,7 +26,7 @@ ChoreDataAccess db = new ChoreDataAccess();
 
 await db.CreateUser(new UserModel() { FirstName = "Tim", LastName = "Corey" });
 
-/*var users = await db.GetAllUsers();
+var users = await db.GetAllUsers();
 
 var chore = new ChoreModel() 
 { 
@@ -42,4 +42,4 @@ var chores = await db.GetAllChores();
 var newChore = chores.First();
 newChore.LastCompleted = DateTime.UtcNow;
 
-await db.CompleteChore(newChore);*/
+await db.CompleteChore(newChore);
