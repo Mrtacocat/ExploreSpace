@@ -1,6 +1,6 @@
-
-using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+
 namespace Backend.Models;
 
 public class ChoreHistoryModel
@@ -25,5 +25,4 @@ public class ChoreHistoryModel
         WhoCompleted = chore.AssignedTo;
         ChoreText = chore.ChoreText;
     }
-
 }

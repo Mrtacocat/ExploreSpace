@@ -1,6 +1,6 @@
-
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+
 namespace Backend.Models;
 
 public class UserModel
@@ -11,5 +11,4 @@ public class UserModel
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string FullName => $"{FirstName} {LastName}";
-
 }

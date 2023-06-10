@@ -1,43 +1,45 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using Backend.DataAccess;
+using MongoDB.Driver;
+using Backend;
+using Backend.Models;
 
-public partial class Program
-{
-    public static void Main(string[] args)
-    {
-        var builder = WebApplication.CreateBuilder(args);
+//string connectionString = "mongodb://127.0.0.1:27017";
+//string databaseName = "simple_db";
+//string collectionName = "people";
 
-        // Add services to the container.
-        builder.Services.AddControllers();
-        builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
-        builder.Services.AddTransient<DatabaseInitializer>();
+//var client = new MongoClient(connectionString);
+//var db = client.GetDatabase(databaseName);
+//var collection = db.GetCollection<PersonModel>(collectionName);
 
-        var app = builder.Build();
+//var person = new PersonModel { FirstName = "Tim", LastName = "Corey" };
 
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+//await collection.InsertOneAsync(person);
 
-        app.UseRouting();
-        app.UseAuthorization();
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllers();
-        });
+//var results = await collection.FindAsync(_ => true);
 
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
+//foreach (var result in results.ToList())
+//{
+//    Console.WriteLine($"{result.Id}: {result.FirstName} {result.LastName}");
+//}
 
-        app.MapControllers();
+ChoreDataAccess db = new ChoreDataAccess();
 
-        var databaseInitializer = app.Services.GetService<DatabaseInitializer>();
-        databaseInitializer.Initialize();
+await db.CreateUser(new UserModel() { FirstName = "Tim", LastName = "Corey" });
 
-        app.Run();
-    }
-}
+/*var users = await db.GetAllUsers();
+
+var chore = new ChoreModel() 
+{ 
+    AssignedTo = users.First(), 
+    ChoreText = "Mow the Lawn", 
+    FrequencyInDays = 7 
+};
+
+await db.CreateChore(chore);
+
+var chores = await db.GetAllChores();
+
+var newChore = chores.First();
+newChore.LastCompleted = DateTime.UtcNow;
+
+await db.CompleteChore(newChore);*/
