@@ -11,10 +11,11 @@ namespace Backend.Models
         public AccDataAccess(IConfiguration configuration)
         {
             var connectionString = configuration.GetConnectionString("DefaultConnection");
+            var databaseName = configuration.GetValue<string>("DatabaseName");
+
             var client = new MongoClient(connectionString);
-            var databaseName = MongoUrl.Create(connectionString).DatabaseName;
             var database = client.GetDatabase(databaseName);
-            _usersCollection = database.GetCollection<UserModel>("Users");
+            _usersCollection = database.GetCollection<UserModel>("users");
         }
 
         public UserModel GetUserByUsername(string username)
