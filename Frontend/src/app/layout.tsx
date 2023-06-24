@@ -1,20 +1,13 @@
-import { Inter } from 'next/font/google'
+// components/Layout.tsx
 
-const inter = Inter({ subsets: ['latin'] })
+import React, { ReactNode } from "react";
 
-export const metadata = {
-  title: 'ExploreSpace',
-  description: 'ExploreSpace is a website that allows you to explore space.',
+interface LayoutProps {
+  children: ReactNode;
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  )
-}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return <div className="layout">{children}</div>;
+};
+
+export default Layout;
