@@ -77,3 +77,5 @@ C:\Users\Christoffer\Source\Repos\Mrtacocat\ExploreSpace\Backend\obj\Debug\net6.
 C:\Users\Christoffer\Source\Repos\Mrtacocat\ExploreSpace\Backend\obj\Debug\net6.0\Backend.pdb
 C:\Users\Christoffer\Source\Repos\Mrtacocat\ExploreSpace\Backend\obj\Debug\net6.0\Backend.genruntimeconfig.cache
 C:\Users\Christoffer\Source\Repos\Mrtacocat\ExploreSpace\Backend\obj\Debug\net6.0\ref\Backend.dll
+C:\Users\Christoffer\OneDrive - Telemark fylkeskommune\Hobby - WebDev\ExploreSpace\backend\bin\Debug\net6.0\DotNetEnv.dll
+C:\Users\Christoffer\OneDrive - Telemark fylkeskommune\Hobby - WebDev\ExploreSpace\backend\bin\Debug\net6.0\Sprache.dll

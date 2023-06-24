@@ -3,29 +3,28 @@ using Backend.Models;
 
 namespace Backend.Controllers
 {
-    [Route("api/register")]
+    [Route("api/login")]
     [ApiController]
-    public class RegisterController : ControllerBase
+    public class LoginController : ControllerBase
     {
         private readonly AccDataAccess _dataAccess;
 
-        public RegisterController(AccDataAccess dataAccess)
+        public LoginController(AccDataAccess dataAccess)
         {
             _dataAccess = dataAccess;
         }
 
         [HttpPost]
-        public ActionResult Register(UserModel user)
+        public ActionResult<UserModel> Login(UserModel user)
         {
             var storedUser = _dataAccess.GetUserByUsername(user.Username);
 
-            if (storedUser != null)
+            if (storedUser == null || storedUser.Password != user.Password)
             {
-                return BadRequest("Username already exists");
+                return BadRequest("Invalid username or password");
             }
 
-            _dataAccess.RegisterUser(user);
-            return Ok();
+            return storedUser;
         }
     }
 }
